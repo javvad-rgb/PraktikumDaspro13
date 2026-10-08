@@ -18,5 +18,22 @@ public class StudiKasus113 {
 
         System.out.print("Masukkan uang bayar : ");
         uangbayar = scanner.nextInt();
+
+        totalharga = hargapercup * jumlahcup;
+        
+        totalbayar = uangbayar;
+
+        kembalian = uangbayar - totalbayar;
+
+        diskon = (totalharga >= 100000) ? totalharga * 10 / 100 : 0;
+
+        kurang = totalharga - uangbayar;
+
+        System.out.println("Total harga : " + totalharga);
+        System.out.println("Diskon : " + diskon);
+        System.out.println("Total bayar : " + totalbayar);
+        System.out.println("Uang tidak cukup, kurang Rp " + kurang);
+
+        scanner.close();
     }
 }
