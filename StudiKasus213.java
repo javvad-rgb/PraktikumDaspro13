@@ -35,6 +35,20 @@ public class StudiKasus213 {
                 status = false; 
                 System.out.println("Dokumen tidak lengkap (kurang " + (4 - dokumen) + " dokumen) dan bukan juara. Dana penghargaan tidak diberikan.");
             }
+        }else if (jeniskegiatan.equals("PKM")) {
+            System.out.print("Masukkan jumlah dokumen : ");
+            dokumen = scanner.nextInt();
+            if (dokumen == 4) {
+                statuspkm = true; 
+                System.out.println("Dokumen lengkap. Dana penghargaan diberikan");
+            } else {
+                statuspkm = false; 
+                System.out.println("Dokumen tidak lengkap (kurang " + (4 - dokumen) + " dokumen). Dana penghargaan tidak diberikan.");
+            }
+        }else if(jeniskegiatan.equalsIgnoreCase("LAINNYA")) {
+            System.out.println("Dana penghargaan tidak diberikan.");
+            }
+
+        scanner.close();
         }
-    }
 }
